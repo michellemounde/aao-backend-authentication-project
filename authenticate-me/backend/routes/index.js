@@ -5,6 +5,12 @@ const apiRouter = require('./api');
 
 router.use('/api', apiRouter);
 
+// GET /hello/world -- Test route
+router.get('/hello/world', function(req, res) {
+  res.cookie('XSRF-TOKEN', req.csrfToken());
+  res.send('Hello World!');
+});
+
 // GET /api/csrf/restore
 router.get('/api/csrf/restore', (req, res) => {
   const csrfToken = req.csrfToken();

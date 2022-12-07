@@ -5,6 +5,7 @@ const { User } = require('../../db/models');
 
 const router = express.Router();
 
+// Log in
 // POST /api/session
 router.post('/', async (req, res, next) => {
 
@@ -23,6 +24,13 @@ router.post('/', async (req, res, next) => {
   await setTokenCookie(res, user);
 
   return res.json({ user });
+});
+
+// Log out
+// DELETE /api/session
+router.delete('/', async (_req, res) => {
+  res.clearCookie('token');
+  return res.json({ message: 'success' });
 });
 
 module.exports = router;

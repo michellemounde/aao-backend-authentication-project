@@ -1,0 +1,25 @@
+{
+  "name": "aao-backend-authentication-project",
+  "version": "1.0.0",
+  "description": "AAO Backend Authentication project that can be used as a ful project starter for creating my first API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "npm --prefix backend install backend",
+    "dev:backend": "npm install --prefix backend start",
+    "sequelize": "npm run --prefix backend sequelize",
+    "sequelize-cli": "npm run --prefix backend sequelize-cli",
+    "start": "npm start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michellemounde/aao-backend-authentication-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michellemounde/aao-backend-authentication-project/issues"
+  },
+  "homepage": "https://github.com/michellemounde/aao-backend-authentication-project#readme"
+}
